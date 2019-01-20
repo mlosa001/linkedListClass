@@ -23,7 +23,14 @@ public class Main {
         System.out.println(mylist.head.next);
         System.out.println(mylist.head.next.data);
         mylist.print();
-
+        mylist.prepend(3);
+        mylist.print();
+        mylist.append(7);
+        mylist.print();
+        mylist.append(7);
+        mylist.print();
+        mylist.delete((7));
+        mylist.print();
 
 
 

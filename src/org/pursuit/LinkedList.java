@@ -22,6 +22,28 @@ public class LinkedList {
 
 
     }
+
+
+    public void prepend(int element){
+        LinkedListNode temp = new LinkedListNode(element);
+        temp.next = head;
+        head = temp;
+    }
+
+    public void delete(int value){
+        LinkedListNode temp = head;
+        LinkedListNode prev = temp;
+
+        while(temp != null && temp.data != value){
+            prev = temp;
+            temp = temp.next;
+        }
+        prev.next = temp.next;
+        temp.next = null;
+    }
+
+
+
     public void print(){
         LinkedListNode current = head;
         while (current != null){
